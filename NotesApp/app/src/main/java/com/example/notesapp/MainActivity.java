@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1;
+
     LinearLayout layout1;
 
 
@@ -19,24 +19,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button1 = findViewById(R.id.button1);
+
         layout1 = findViewById(R.id.layout1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectFragment(new signup_fragment());
-            }
-
-            private void selectFragment(Fragment fragment) {
-
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout,fragment);
-                fragmentTransaction.commit();
-
-            }
-        });
-
+        selectFragment(new signup_fragment());
 
     }
-}
+
+    private void selectFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout,fragment);
+        fragmentTransaction.commit();
+
+    }
+    }
