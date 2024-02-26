@@ -45,7 +45,21 @@
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:visibility="visible"
-            tools:ignore="ExtraText"/>
+            tools:ignore="ExtraText">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:backgroundTint="#436850"
+                android:text="Click here to get started"
+                android:textSize="20sp" />
+
+            \
+
+        </RelativeLayout>
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_below="@+id/layout2"
